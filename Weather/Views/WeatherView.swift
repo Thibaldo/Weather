@@ -13,7 +13,7 @@ struct WeatherView: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            GradientBackground()
+            AnimatedGradientBackground()
             
             VStack {
                 VStack(alignment: .leading, spacing: 5) {

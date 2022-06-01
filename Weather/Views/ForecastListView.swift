@@ -11,6 +11,12 @@ struct ForecastListView: View {
     var forecast: ForecastResponse
     @State var selectedDay = Date()
     
+    static let taskDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter
+    }()
+    
     var body: some View {
         VStack {
             HStack {
@@ -18,11 +24,24 @@ struct ForecastListView: View {
                     Button(action: {
                         selectedDay = getOffsetDate(day)
                     }) {
-                        Text(getOffsetDate(day), style: .date)
+                        ZStack {
+                            Text(getOffsetDate(day), formatter: Self.taskDateFormat)
+                                .font(.system(size: 10))
+                                .foregroundColor(.primary)
+                        }
                     }
+                    .frame(height: 20)
+                    .padding(.vertical, 5)
+                    .padding(.horizontal, 10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(selectedDay.hasSame(.day, as: getOffsetDate(day)) ? .secondary : .primary, lineWidth: 2)
+                    )
+                    
+                    
                 }
             }
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(getSelectedDayData(selectedDay)) { element in
                         ForecastElement(forecastElement: element)
@@ -36,6 +55,7 @@ struct ForecastListView: View {
     func getOffsetDate(_ offset: Int) -> Date {
         return Calendar.current.date(byAdding: .day, value: offset, to: Date()) ?? Date()
     }
+    
     
     func getSelectedDayData(_ selectedDate: Date) -> [ForecastResponse.ForecastElementResponse] {
         return forecast.list.filter{ element in
@@ -51,5 +71,6 @@ struct ForecastListView: View {
 struct ForecastListView_Previews: PreviewProvider {
     static var previews: some View {
         ForecastListView(forecast: previewForecast)
+            .background(.blue)
     }
 }

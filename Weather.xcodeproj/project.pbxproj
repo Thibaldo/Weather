@@ -22,7 +22,7 @@
 		152EDC1F283FE1D60000122C /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EDC1E283FE1D60000122C /* WeatherRow.swift */; };
 		152EDC21284002420000122C /* DynamicWeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EDC20284002420000122C /* DynamicWeatherIcon.swift */; };
 		152EDC2428400C770000122C /* DateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EDC2328400C770000122C /* DateTool.swift */; };
-		152EDC2628401C220000122C /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EDC2528401C220000122C /* GradientBackground.swift */; };
+		152EDC2628401C220000122C /* AnimatedGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EDC2528401C220000122C /* AnimatedGradientBackground.swift */; };
 		159CC7062840397000F9AA67 /* ForecastListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CC7052840397000F9AA67 /* ForecastListView.swift */; };
 		159CC708284039BA00F9AA67 /* forecastData.json in Resources */ = {isa = PBXBuildFile; fileRef = 159CC707284039BA00F9AA67 /* forecastData.json */; };
 		159CC70A28403C2300F9AA67 /* ForecastElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CC70928403C2300F9AA67 /* ForecastElement.swift */; };
@@ -46,7 +46,7 @@
 		152EDC1E283FE1D60000122C /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
 		152EDC20284002420000122C /* DynamicWeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWeatherIcon.swift; sourceTree = "<group>"; };
 		152EDC2328400C770000122C /* DateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTool.swift; sourceTree = "<group>"; };
-		152EDC2528401C220000122C /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		152EDC2528401C220000122C /* AnimatedGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradientBackground.swift; sourceTree = "<group>"; };
 		159CC7052840397000F9AA67 /* ForecastListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListView.swift; sourceTree = "<group>"; };
 		159CC707284039BA00F9AA67 /* forecastData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forecastData.json; sourceTree = "<group>"; };
 		159CC70928403C2300F9AA67 /* ForecastElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastElement.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 			children = (
 				152EDC1E283FE1D60000122C /* WeatherRow.swift */,
 				152EDC20284002420000122C /* DynamicWeatherIcon.swift */,
-				152EDC2528401C220000122C /* GradientBackground.swift */,
+				152EDC2528401C220000122C /* AnimatedGradientBackground.swift */,
 				159CC70928403C2300F9AA67 /* ForecastElement.swift */,
 			);
 			path = Components;
@@ -229,7 +229,7 @@
 				152EDBFF283F92660000122C /* ContentView.swift in Sources */,
 				152EDC0F283F96590000122C /* WelcomeView.swift in Sources */,
 				152EDC2428400C770000122C /* DateTool.swift in Sources */,
-				152EDC2628401C220000122C /* GradientBackground.swift in Sources */,
+				152EDC2628401C220000122C /* AnimatedGradientBackground.swift in Sources */,
 				152EDBFD283F92660000122C /* WeatherApp.swift in Sources */,
 				152EDC1F283FE1D60000122C /* WeatherRow.swift in Sources */,
 				152EDC11283F99F50000122C /* LoadingView.swift in Sources */,
@@ -371,6 +371,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -401,6 +402,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
